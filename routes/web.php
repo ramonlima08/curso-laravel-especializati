@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 //ESSA LINHA SUBSTITUI TODAS AS ROTAS ABAIXO DE CRUD
-Route::resource('products','ProductController');
+Route::resource('products','ProductController'); //->middleware('auth');
+
 
 /*
 Route::delete('products/{id}','ProductController@destroy')->name('products.destroy');

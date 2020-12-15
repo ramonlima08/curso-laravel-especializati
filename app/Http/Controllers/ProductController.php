@@ -6,6 +6,19 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    protected $request;
+
+    public function __construct(Request $request){
+        //dd($request);
+        $this->request = $request;
+        //APCLICA MIDDLEWARE EM TODA A CLASSE
+        //$this->middleware('auth');
+        //APCLICA MIDDLEWARE NOS MÉTODOS INFORMADOS
+        //$this->middleware('auth')->only(['create','store']);
+        //APCLICA MIDDLEWARE EM TODA A CLASSE, COM EXCESSÃO DOS MÉTODOS INFORMADOS
+        //$this->middleware('auth')->except(['index']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +26,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $teste = 123;
+        $var = "Variavel definida no controle";
+        $str = "String com HTML implicita no conteúdo <strong>Conteudo</strong> ";
+        return view('teste',compact('teste','var','str'));
     }
 
     /**
@@ -23,7 +39,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return "Create";
     }
 
     /**
@@ -34,7 +50,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "Store";
     }
 
     /**
@@ -45,7 +61,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Show {$id}";
     }
 
     /**
@@ -56,7 +72,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Form Edit";
     }
 
     /**
@@ -68,7 +84,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Update";
     }
 
     /**
@@ -79,6 +95,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "Destroy";
     }
 }
