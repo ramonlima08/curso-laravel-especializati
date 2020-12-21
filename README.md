@@ -36,3 +36,10 @@ Seguindo o cronograma do curso, fizemos a instalação do [Laragon](https://lara
 
 
 ## Prints do Projeto Rodando
+
+![Imagem1](https://user-images.githubusercontent.com/24830257/102820984-f21b9400-43b4-11eb-80ec-fe7ab3f795c3.png)
+
+![Imagem2](https://user-images.githubusercontent.com/24830257/102821041-1aa38e00-43b5-11eb-80f1-b90e2f54fce3.png)
+
+![Imagem3](https://user-images.githubusercontent.com/24830257/102821147-58a0b200-43b5-11eb-89fb-dded0c984ffa.png)
+

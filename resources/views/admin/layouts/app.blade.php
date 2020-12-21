@@ -70,6 +70,8 @@
         </div>
     </nav>
 
+    <br/>
+
     <div class="container">
         @yield('content')
     </div>
