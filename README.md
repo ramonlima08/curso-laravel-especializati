@@ -41,5 +41,4 @@ Seguindo o cronograma do curso, fizemos a instalação do [Laragon](https://lara
 
 ![Imagem2](https://user-images.githubusercontent.com/24830257/102821041-1aa38e00-43b5-11eb-80f1-b90e2f54fce3.png)
 
-![Imagem3](https://user-images.githubusercontent.com/24830257/102821147-58a0b200-43b5-11eb-89fb-dded0c984ffa.png)
-
+![Imagem3](https://user-images.githubusercontent.com/24830257/102821829-8afedf00-43b6-11eb-905d-af4ed16c5798.png)
