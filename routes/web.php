@@ -3,9 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 //ESSA ROTA PRECISA ESTAR ACIMA DA RESOURCE, SE NÃO NÃO FUNCIONA
-Route::any('products/search','ProductController@search')->name('products.search');
+Route::any('products/search','ProductController@search')->name('products.search')->middleware('auth');
 //ESSA LINHA SUBSTITUI TODAS AS ROTAS ABAIXO DE CRUD
-Route::resource('products','ProductController'); //->middleware('auth');
+Route::resource('products','ProductController')->middleware(['auth']);//middleware(['auth', 'check.is.admin']);
+
+Auth::routes(['register'=>false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 /*
@@ -17,9 +21,9 @@ Route::get('products/{id}','ProductController@show')->name('products.show');
 Route::get('products','ProductController@index')->name('products.index');
 Route::post('products','ProductController@store')->name('products.store');*/
 
-Route::get('login', function () {
+/*Route::get('login', function () {
     return "Login";
-})->name('login');
+})->name('login');*/
 
 //-------------------------------
 
@@ -189,6 +193,24 @@ Route::get('/red', function(){
  * Pagina do Laravel DOCS para ver os tipos de colunas
  * https://laravel.com/docs/8.x/migrations#columns
  * 
+ * 
  * Ver as rotas
  * php artisan route:list
+ * 
+ * PARA INSTALAR A AUTENTICAÇÃO, É NECESSÁRIO LER O MANUAL COM A VERSÃO ATUAL DO SEU LARAVEL
+ * PRIMEIRO, SABER A VERSÃO DO LARAVEL ATUAL
+ * php artisan --version
+ * 
+ * MEU CASO ESTOU RODANDO LARAVEL 7.30
+ * PARA INSTALAR A AUTENTICAÇÃO RODAR OS SEGUINTES COMANDOS
+ * composer require laravel/ui:^2.4
+ * php artisan ui vue --auth
+ * 
+ * SCRIPTS PARA CRIAR O VISUAL (COMPILAR O ASSETS)
+ * npm insall
+ * npm run dev
+ * 
+ * CRIANDO MIDLWARE (filtros específicos)
+ * php artisan make:middleware CheckIsAdminMiddleware
+ * 
  */
