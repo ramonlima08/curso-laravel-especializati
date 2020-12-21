@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+//ESSA ROTA PRECISA ESTAR ACIMA DA RESOURCE, SE NÃO NÃO FUNCIONA
+Route::any('products/search','ProductController@search')->name('products.search');
 //ESSA LINHA SUBSTITUI TODAS AS ROTAS ABAIXO DE CRUD
 Route::resource('products','ProductController'); //->middleware('auth');
 
@@ -153,6 +155,39 @@ Route::get('/red', function(){
  * 
  * Limpar as rotas em cache
  * php artisan route:cache
+ * 
+ * Limpar o cache das views
+ * php artisan view:clear
+ * 
+ * Criar o link simbolico da pasta onde ficam os arquivos updados
+ * php artisan storage:link
+ * 
+ * Comando para criar REQUESTs arquivos de validação de FORMULÁRIOS
+ * php artisan make:request StoreUpdateProductRequest
+ * 
+ * Comando para rodar as migrations e criar as tabelas no BD
+ * php artisan migrate
+ * 
+ * Se alterar o nome de alguma migration, alterar a ordem delas deve rodar esse comando
+ * composer dump-autoload
+ * 
+ * Comando para criar a classe de seeder
+ * php artisan make:seeder UsersTableSeeder
+ * 
+ * Comando para criar os seeds no bd
+ * php artisan bd:seed
+ * 
+ * Comando para criar a classe de factory
+ * php artisan make:factory ProductFactory --model=Models\\Product
+ * 
+ * Comando para criar dados fakes (os fakes estão apontados no seeder)
+ * php artisan bd:seed --class=UsersTableSeeder
+ * 
+ * Comando para CRIAÇÂO de Model (Cria Model e Migrate)
+ * php artisan make:model Models\\Product -m
+ * 
+ * Pagina do Laravel DOCS para ver os tipos de colunas
+ * https://laravel.com/docs/8.x/migrations#columns
  * 
  * Ver as rotas
  * php artisan route:list
