@@ -151,6 +151,14 @@ Route::get('/red', function(){
 
 
 /**
+ * Para a Instalação de qualquer versão do Laravel, o recomendado é seguir a Documentação
+ * 
+ * Depois de instalado, entrar na pasta e gerar a chave
+ * php artisan key:generate
+ * 
+ * Comandos para versionar no GitHub
+ * Ver Trello pessoal com passo a passo do GIT
+ * 
  * Comando criação de controllers
  * php artisan make:controller Admin\TesteController
  * 
