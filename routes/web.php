@@ -159,6 +159,10 @@ Route::get('/red', function(){
  * Comandos para versionar no GitHub
  * Ver Trello pessoal com passo a passo do GIT
  * 
+ * Configurar o arquivo .env
+ * Rodar as migrates padrões do sistema LARAVEL
+ * php artisan migrate
+ *
  * Comando criação de controllers
  * php artisan make:controller Admin\TesteController
  * 
@@ -177,6 +181,12 @@ Route::get('/red', function(){
  * Comando para criar REQUESTs arquivos de validação de FORMULÁRIOS
  * php artisan make:request StoreUpdateProductRequest
  * 
+ * Comando para criar uma migrate 
+ * php artisan make:migration create_users_table --create=users
+ * 
+ * Comandos para criar migrate para atualizar campos de tabela
+ * php artisan make:migration add_votes_to_users_table --table=users
+ *
  * Comando para rodar as migrations e criar as tabelas no BD
  * php artisan migrate
  * 
